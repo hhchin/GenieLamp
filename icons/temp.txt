@@ -1,7 +1,0 @@
-check.png
-gears.png
-globe.png
-idea.png
-layers.png
-located.png
-sharing.png
