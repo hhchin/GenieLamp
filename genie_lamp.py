@@ -26,6 +26,8 @@ from PyQt4.QtGui import QAction, QIcon, QWidget,  QSizePolicy, QDockWidget, QCur
 import resources_rc
 # Import the code for the dialog
 from genie_lamp_dialog import GenieLampDialog
+from quest_panel import QuestPanel
+
 import os.path
 
 
@@ -70,7 +72,7 @@ class GenieLamp:
         self.toolbar.setOrientation(Qt.Vertical)
 	self.toolbar.setIconSize(QSize(64,64))
 
-	self.panelWidget = QDockWidget(u'Lamp')
+	self.panelWidget = QuestPanel()
 	self.iface.addDockWidget( Qt.RightDockWidgetArea, self.panelWidget )
 
     # noinspection PyMethodMayBeStatic

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <title>iCanDonations</title>
+
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="images/favicon.ico">
+
+  
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  
+  <link rel="stylesheet" href="css/owl.carousel.css">
+
+  
+  <link rel="stylesheet" href="css/slider.css">
+
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  
+  <script src="js/jquery.js"></script>
+  
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+  
+  <script src="js/script.js"></script>
+  
+  <script src="js/jquery.ui.totop.js"></script>
+  
+  <script src="js/superfish.js"></script>
+  
+  <script src="js/jquery.equalheights.js"></script>
+  
+  <script src="js/jquery.mobilemenu.js"></script>
+  
+  <script src="js/jquery.easing.1.3.js"></script>
+  
+  <script src="js/owl.carousel.js"></script>
+  
+  <script src="js/jquery.flexslider-min.js"></script>
+  
+  <script src="js/kwiks.js"></script>
+
+     
+
+  <script>
+	$(document).ready(function(){
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				var owl = $("#owl");
+				owl.owlCarousel({
+					items : 4, //10 items above 1000px browser width
+					itemsDesktop : [995,3], //5 items between 1000px and 901px
+					itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+					itemsTablet: [700, 2], //2 items between 600 and 0
+					itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+					navigation : true,
+				});
+			})
+			var Main = Main || {};
+			jQuery(window).load(function() {
+				window.responsiveFlag = jQuery('#responsiveFlag').css('display');
+				Main.gallery = new Gallery();
+				jQuery(window).resize(function() {
+					Main.gallery.update();
+				});
+			});
+			function Gallery(){
+				var self = this,
+					container = jQuery('.flexslider'),
+					clone = container.clone( false );
+					this.init = function (){
+						if( responsiveFlag == 'block' ){
+						var slides = container.find('.slides');
+						slides.kwicks({
+							max : 500,
+							spacing : 0
+						}).find('li > a').click(function (){
+							return false;
+						});
+						} else {
+							container.flexslider();
+						}
+					}
+					this.update = function () {
+						var currentState = jQuery('#responsiveFlag').css('display');
+						if(responsiveFlag != currentState) {
+							responsiveFlag = currentState;
+							container.replaceWith(clone);
+							container = clone;
+							clone = container.clone( false );
+							this.init();
+						}
+					}
+				this.init();
+			}
+
+	function getCanID() {
+var arg = window.location.toString();
+var ind = arg.indexOf('id=')
+var canID = arg.substring(ind+3, ind+9);
+console.log(canID);
+document.getElementById("canId").innerHTML =canID;
+};
+</script>
+
+
+	
+  
+  <style type="text/css">
+
+mheader {
+	display: block;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    position: relative;
+
+}
+       a.mdonate {
+    font: 600 18px/18px 'Open Sans', sans-serif;
+    color: #000;
+    display: block;
+    margin-top: 0px;
+    text-align: center;
+    padding: 0px 0 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px transparent;
+}
+
+a.mdonate:hover {
+    position: relative;
+    box-shadow: 3px 3px 5px #555;
+}            
+  		</style><!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]--><!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+</head><body class="page1" id="top" onload="getCanID();">
+
+<main style="padding:4px 4px 4px">
+<div style="text-align: center; padding: 10px 0px 10px"> <a href="index.html"> <img src="images/logo.png" alt="Your Happy Family"> </a></div>
+<a href="#" class="mdonate">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+<form name="myform" action="http://enigmatic-coast-2621.herokuapp.com/postRecordDonation?id=032015&amount=10" method="POST">
+<div align="center">
+<br><br>
+<input type="submit" value="Manual Donation"><br>
+</div>
+</form>
+
+<div>iCan ID: <span id="canId">test can</span> </div>
+
+</a> 
+
+
+
+<div class="flexslider">
+<ul class="slides">
+  <li> <img src="images/page1_img1.jpg" alt="">
+    <div class="flex-caption">
+    <p>Hope</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  <br>
+</li>
+  <li> <img src="images/page1_img2.jpg" alt="">
+    <div class="flex-caption c2">
+    <p>Save</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  <br>
+</li>
+  <li> <img src="images/page1_img3.jpg" alt="">
+    <div class="flex-caption">
+    <p>Help</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  <br>
+</li>
+</ul>
+
+<span id="responsiveFlag"></span> 
+
+</div>
+
+
+
+  
+</main>
+</body></html>
