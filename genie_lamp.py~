@@ -166,22 +166,23 @@ class GenieLamp:
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
 	self.add_action(
             ':/plugins/GenieLamp/icons/gears.png',
-            text=self.tr(u'dummy icon'),
+            text=self.tr(u'Settings'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
         self.add_action(
             ':/plugins/GenieLamp/icons/globe.png',
-            text=self.tr(u'Prototype tools for the genie system'),
+            text=self.tr(u'Overview'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
         self.add_action(
             ':/plugins/GenieLamp/icons/sharing.png',
-            text=self.tr(u'dummy icon'),
+            text=self.tr(u'Collaborate'),
             callback=self.run,
             parent=self.iface.mainWindow())
-	
+
+	""" space separatot"""
 	separator = QWidget()
 	separator.setSizePolicy(QSizePolicy.Minimum,QSizePolicy.Minimum);
 	separator.setMinimumSize(QSize(64, 64))
@@ -189,31 +190,27 @@ class GenieLamp:
 
 	self.add_action(
             ':/plugins/GenieLamp/icons/layers.png',
-            text=self.tr(u'dummy icon'),
+            text=self.tr(u'Layers'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
 	self.add_action(
             ':/plugins/GenieLamp/icons/tool.png',
-            text=self.tr(u'dummy icon'),
+            text=self.tr(u'Auto Enhancement'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
 	self.add_action(
             ':/plugins/GenieLamp/icons/located.png',
-            text=self.tr(u'dummy icon'),
+            text=self.tr(u'Targeting'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
         self.add_action(
             ':/plugins/GenieLamp/icons/check.png',
-            text=self.tr(u'dummy icon'),
+            text=self.tr(u'Reporting'),
             callback=self.run,
             parent=self.iface.mainWindow())
-
-        
-
-
 
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
@@ -229,8 +226,7 @@ class GenieLamp:
     def run(self):
         """Run method that performs all the real work"""
         # show the dialog
-	mousePos = self.mapFromGlobal(QCursor.pos())
-	self.dlg.move(mousePos)
+	self.dlg.move(QCursor.pos())
         self.dlg.show()
         # Run the dialog event loop
         result = self.dlg.exec_()

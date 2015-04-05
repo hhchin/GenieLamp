@@ -1,11 +1,11 @@
 <RCC>
-    <qresource prefix="/plugins/GenieLamp/icons" >
-        <file>check.png</file>
-        <file>gears.png</file>
-        <file>globe.png</file>
-        <file>tool.png</file>
-        <file>layers.png</file>
-        <file>located.png</file>
-        <file>sharing.png</file>
+    <qresource prefix="/plugins/GenieLamp" >
+        <file>icons/check.png</file>
+        <file>icons/gears.png</file>
+        <file>icons/globe.png</file>
+        <file>icons/tool.png</file>
+        <file>icons/layers.png</file>
+        <file>icons/located.png</file>
+        <file>icons/sharing.png</file>
     </qresource>
 </RCC>

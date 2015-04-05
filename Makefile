@@ -50,7 +50,7 @@ PY_FILES = \
 
 UI_FILES = genie_lamp_dialog_base.ui
 
-EXTRAS = test.png metadata.txt
+EXTRAS = metadata.txt
 
 COMPILED_RESOURCE_FILES = resources_rc.py
 
